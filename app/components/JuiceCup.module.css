@@ -1,0 +1,301 @@
+.wrapper {
+  position: relative;
+  margin-top: 24px;
+}
+
+.wrapper.shake {
+  animation: shake 1s linear 2;
+}
+
+.wrapper.shake .cupIngredient1,
+.wrapper.shake .cupIngredient2,
+.wrapper.shake .cupIngredient3 {
+  transition: 0.7s 1s ease;
+  border-top-color: #f86658;
+}
+
+.wrapper.shake .cupIngredient1:before,
+.wrapper.shake .cupIngredient2:before,
+.wrapper.shake .cupIngredient3:before {
+  transition: 0.7s 1s ease;
+  background: #e64d3f;
+}
+
+.cupCap {
+  position: relative;
+  width: 170px;
+  height: 100px;
+  background: #f7fbfb;
+  border-radius: 100px 100px 0 0;
+}
+
+.cupCap:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  transform: rotatey(45deg) rotatex(-15deg);
+}
+
+.cupCap:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background: #e8e8e8;
+  border-radius: 50%;
+  transform: translatex(-50%) rotatex(60deg);
+}
+
+.cupCapRing {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: -10px;
+  width: 190px;
+  height: 150px;
+  border-radius: 50%;
+  border: 10px solid #e4e4e4;
+  transform: rotatex(245deg);
+  box-shadow: 0 -7px 0 0 #d4d4d4, 0 -20px 0 0 #d4d4d4;
+}
+
+.cupMain {
+  position: relative;
+  width: 170px;
+  border-top: 200px solid #f7fbfb;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-radius: 0 0 100px 100px;
+}
+
+.cupIngredient1 {
+  position: absolute;
+  top: -100px;
+  left: -10px;
+  width: 110px;
+  border-top: 95px solid #fff3ba;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-radius: 0 0 60px 60px / 0 0 40px 40px;
+}
+
+.cupIngredient1:before {
+  content: "";
+  position: absolute;
+  top: -110px;
+  left: -18px;
+  width: 110px;
+  height: 30px;
+  background: #e6dba7;
+  border-radius: 100px / 25px;
+}
+
+.cupIngredient2 {
+  position: absolute;
+  top: -129px;
+  left: -16px;
+  width: 122px;
+  border-top: 50px solid #f5b2c0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-radius: 0 0 120px 120px / 0 0 60px 60px;
+  transform: scale(0.96, 0.5);
+  transform-origin: bottom;
+  animation: fill-in 5s 2s ease-out forwards;
+  opacity: 0;
+}
+
+.cupIngredient2:before {
+  content: "";
+  position: absolute;
+  top: -75px;
+  left: -10px;
+  width: 122px;
+  height: 45px;
+  background: #e0a0ad;
+  border-radius: 100px / 40px;
+}
+
+.cupIngredient3 {
+  position: absolute;
+  top: -156px;
+  left: -20px;
+  width: 130px;
+  border-top: 50px solid #ff818d;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-radius: 0 0 120px 120px / 0 0 60px 60px;
+  transform: scale(0.96, 0.5);
+  transform-origin: bottom;
+  animation: fill-in 5s 5s ease-out forwards;
+  opacity: 0;
+}
+
+.cupIngredient3:before {
+  content: "";
+  position: absolute;
+  top: -75px;
+  left: -8px;
+  width: 130px;
+  height: 45px;
+  background: #e6737f;
+  border-radius: 100px / 40px;
+}
+
+.cupGloss {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  height: 165px;
+  width: 10px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
+  transform: rotate(-8deg);
+}
+
+.cupStroke {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 15px;
+  height: 192px;
+  background: #f5b2c0;
+  border-radius: 10px / 6px;
+  transform: translatex(-50%);
+  animation: stroke 9s 2s ease-out forwards;
+}
+
+.cupStrokeTop {
+  position: absolute;
+  z-index: 1;
+  top: -27px;
+  left: 50%;
+  width: 15px;
+  height: 50px;
+  background: #d99eab;
+  border-radius: 4px;
+  transform: translatex(-50%);
+}
+
+.cupStrokeTop:before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -6px;
+  width: 50px;
+  height: 15px;
+  background: #d99eab;
+  border-radius: 10px;
+  transform: rotate(50deg);
+}
+
+.cupStrokeTop:after {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 23px;
+  width: 15px;
+  height: 15px;
+  background: #99293d;
+  border: 1px solid #d99eab;
+  border-radius: 50%;
+}
+
+.cupStrokeMiddle {
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  left: 50%;
+  width: 15px;
+  height: 20px;
+  background: #f5b2c0;
+  transform: translatex(-50%);
+}
+
+.btnShake {
+  display: flex;
+  font-size: 0;
+  margin-top: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(246, 82, 64, 0.837),
+    0 0 0 10px rgba(246, 81, 64, 0.1);
+  animation: pulse 2s ease infinite;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 3;
+  background-color: white;
+}
+
+.btnShake img {
+  margin: auto;
+  max-height: 40px;
+}
+
+@keyframes fill-in {
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes stroke {
+  40% {
+    height: 160px;
+  }
+  100% {
+    height: 133px;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(25deg);
+  }
+  15% {
+    transform: rotate(-20deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  35% {
+    transform: rotate(-15deg);
+  }
+  45% {
+    transform: rotate(10deg);
+  }
+  55% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    box-shadow: 0 0 0 10px rgba(246, 81, 64, 0.2),
+      0 0 0 20px rgba(246, 81, 64, 0.1);
+  }
+}
