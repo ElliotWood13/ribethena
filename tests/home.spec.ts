@@ -31,7 +31,7 @@ test.describe("Home Page", () => {
     await expect(splashImage).toBeVisible();
 
     // Verify initial text
-    const initialText = page.getByText("Shake the drink, make it pop..");
+    const initialText = page.getByText("Valters woz ere");
     await expect(initialText).toBeVisible();
 
     // Click the shake button
