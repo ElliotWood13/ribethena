@@ -40,5 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-/palywright-report*
-/test-results
+# playwright
+/playwright-report/
+/test-results/
+**/playwright-report/
+**/test-results/
+*.trace.zip
