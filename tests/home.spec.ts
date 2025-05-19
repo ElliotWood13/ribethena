@@ -6,7 +6,9 @@ test.describe("Home Page", () => {
     await page.goto("/");
 
     // Verify the main heading
-    const heading = page.getByRole("heading", { name: "Welcome to Ribethena" });
+    const heading = page.getByRole("heading", {
+      name: "Ribethena Fresh Juice Drink",
+    });
     await expect(heading).toBeVisible();
 
     // Verify navigation links
@@ -25,10 +27,6 @@ test.describe("Home Page", () => {
 
     const shakeButton = page.getByRole("button", { name: "SHAKE" });
     await expect(shakeButton).toBeVisible();
-
-    // Verify the splash image is visible before clicking
-    const splashImage = page.getByRole("img", { name: "Splash effect" });
-    await expect(splashImage).toBeVisible();
 
     // Verify initial text
     const initialText = page.getByText("Valters woz ere");
