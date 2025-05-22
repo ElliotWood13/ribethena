@@ -27,8 +27,9 @@ test.describe("Home Page", () => {
 
     const shakeButton = page.getByRole("button", { name: "SHAKE" });
     await expect(shakeButton).toBeVisible();
+
     // Verify initial text
-    const initialText = page.getByText("Shake the drink, make it pop..");
+    const initialText = page.getByText("Valters woz ere");
     await expect(initialText).toBeVisible();
 
     // Click the shake button
